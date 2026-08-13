@@ -2,6 +2,7 @@
   const header = document.getElementById('siteHeader');
   const navToggle = document.getElementById('navToggle');
   const mainNav = document.getElementById('mainNav');
+  const navBackdrop = document.getElementById('navBackdrop');
   const yearEl = document.getElementById('year');
 
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -17,15 +18,51 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 
   if (navToggle && mainNav) {
+    const openNav = () => {
+      mainNav.classList.add('open');
+      navToggle.classList.add('active');
+      navToggle.setAttribute('aria-expanded', 'true');
+      navToggle.setAttribute('aria-label', 'Menü schliessen');
+      if (navBackdrop) {
+        navBackdrop.hidden = false;
+        requestAnimationFrame(() => navBackdrop.classList.add('visible'));
+      }
+      document.body.classList.add('nav-open-lock');
+    };
+
+    const closeNav = () => {
+      mainNav.classList.remove('open');
+      navToggle.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Menü öffnen');
+      if (navBackdrop) {
+        navBackdrop.classList.remove('visible');
+        setTimeout(() => { navBackdrop.hidden = true; }, 300);
+      }
+      document.body.classList.remove('nav-open-lock');
+    };
+
     navToggle.addEventListener('click', () => {
-      const isOpen = mainNav.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', String(isOpen));
+      if (mainNav.classList.contains('open')) {
+        closeNav();
+      } else {
+        openNav();
+      }
     });
+
     mainNav.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        mainNav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
+      link.addEventListener('click', closeNav);
+    });
+
+    if (navBackdrop) {
+      navBackdrop.addEventListener('click', closeNav);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mainNav.classList.contains('open')) {
+        closeNav();
+        navToggle.focus();
+      }
     });
   }
 
