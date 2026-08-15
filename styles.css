@@ -85,6 +85,8 @@ p{ margin:0 0 1em; }
 .btn-primary:hover{ background:var(--wine-dark); transform:translateY(-2px); }
 .btn-ghost{ background:transparent; color:#fff; border-color:rgba(255,255,255,.6); }
 .btn-ghost:hover{ background:rgba(255,255,255,.12); border-color:#fff; }
+.btn-ghost-dark{ background:transparent; color:var(--ink); border-color:var(--ink); }
+.btn-ghost-dark:hover{ background:var(--ink); color:#fff; }
 .btn-block{ width:100%; }
 
 /* ---------- Header ---------- */
@@ -301,7 +303,7 @@ a.bestellen-item:hover{ background:#2c2521; }
 /* ---------- Footer ---------- */
 .site-footer{ background:var(--ink); color:#e9e2da; padding:4.5em 0 0; }
 .footer-grid{
-  display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:2.5em;
+  display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr 1fr; gap:2.5em;
   padding-bottom:3em; border-bottom:1px solid rgba(255,255,255,.12);
 }
 .footer-brand{ display:flex; flex-direction:column; align-items:flex-start; }
@@ -382,4 +384,107 @@ a.bestellen-item:hover{ background:#2c2521; }
 @media (max-width:760px){
   .phone-fab{ width:52px; height:52px; right:1em; bottom:calc(1em + env(safe-area-inset-bottom, 0px)); }
   .phone-fab svg{ width:22px; height:22px; }
+}
+
+/* ---------- Active nav link ---------- */
+.main-nav a.current{ font-weight:600; }
+.main-nav a.current:not(.nav-cta)::after{ transform:scaleX(1); transform-origin:left; }
+
+/* ---------- Interior page banner ---------- */
+.page-banner{
+  position:relative;
+  min-height:340px; height:46vh; height:46svh;
+  overflow:hidden;
+  display:flex; align-items:flex-end;
+}
+.page-banner img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.page-banner-scrim{
+  position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(20,16,14,.32) 0%, rgba(20,16,14,.3) 45%, rgba(20,16,14,.72) 100%);
+}
+.page-banner-content{
+  position:relative; z-index:1; width:100%;
+  padding:7em 6vw 2.6em; max-width:var(--container); margin:0 auto; color:#fff;
+}
+.page-banner-content .kicker{ color:#f1e4de; }
+.page-banner-content h1{ color:#fff; font-size:clamp(2.1rem,4.4vw,3.2rem); margin-bottom:.3em; }
+.page-banner-content p{ color:#f1ece5; max-width:60ch; margin:0; font-size:1.02rem; }
+
+/* ---------- CTA banner ---------- */
+.cta-banner{ padding:5.5em 0; text-align:center; background:var(--ink); color:#fff; }
+.cta-banner h2{ color:#fff; font-size:clamp(1.8rem,3vw,2.4rem); margin-bottom:.5em; }
+.cta-banner p{ color:#e9e2da; max-width:52ch; margin:0 auto 1.8em; }
+.cta-banner .btn-actions{ display:flex; gap:1em; justify-content:center; flex-wrap:wrap; }
+
+/* ---------- Section CTA link ---------- */
+.section-cta{ text-align:center; margin-top:3em; }
+
+/* ---------- Open / closed status badge ---------- */
+.open-status{
+  display:inline-flex; align-items:center; gap:.55em;
+  font-size:.85rem; font-weight:600; letter-spacing:.02em;
+}
+.open-status .dot{
+  width:8px; height:8px; border-radius:50%;
+  background:#7a9b6b; box-shadow:0 0 0 3px rgba(122,155,107,.22);
+  flex-shrink:0;
+}
+.open-status.is-closed .dot{
+  background:#b25b5b; box-shadow:0 0 0 3px rgba(178,91,91,.18);
+}
+
+/* ---------- Team (Über uns) ---------- */
+.team{ padding:5em 0; }
+.team-intro{ max-width:64ch; }
+.team-grid{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:2.2em;
+  margin-top:3em;
+}
+.team-card{
+  background:var(--paper-alt); padding:2.2em 1.9em; border-radius:var(--radius);
+}
+.team-avatar{
+  width:50px; height:50px; border-radius:50%;
+  background:var(--wine); color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-serif); font-size:1.2rem; margin-bottom:1.1em;
+}
+.team-card h3{ font-size:1.25rem; margin-bottom:.15em; }
+.team-role{ font-size:.85rem; color:var(--wine); font-weight:600; margin-bottom:.25em; }
+.team-meta{ font-size:.8rem; color:var(--ink-soft); margin-bottom:1em; }
+.team-traits{
+  font-size:.74rem; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--sage); margin-bottom:1.1em; font-weight:600;
+}
+.team-quote{
+  font-family:var(--font-serif); font-style:italic; color:var(--ink-soft);
+  font-size:1.02rem; margin-bottom:0;
+}
+.team-note{
+  margin-top:3em; padding:2em; background:var(--paper-alt);
+  border-left:2px solid var(--wine); border-radius:var(--radius);
+}
+.team-note h3{ font-size:1.1rem; margin-bottom:.4em; }
+.team-note p{ color:var(--ink-soft); margin-bottom:0; font-size:.96rem; }
+
+/* ---------- Workshops (Angebot) ---------- */
+.workshop{ padding:5.5em 0; background:var(--paper-alt); }
+.workshop-grid{
+  display:grid; grid-template-columns:1fr 1fr; gap:2.2em; margin-top:3em;
+}
+.workshop-card{
+  background:#fff; padding:2.2em; border-radius:var(--radius); border:1px solid var(--line);
+}
+.workshop-card h3{ font-size:1.25rem; margin-bottom:.5em; }
+.workshop-card p{ color:var(--ink-soft); font-size:.96rem; margin-bottom:1.3em; }
+
+/* ---------- Footer navigation column ---------- */
+.footer-col ul{ list-style:none; margin:0; padding:0; }
+.footer-col ul li{ margin-bottom:.6em; }
+.footer-col ul a{ color:#cfc8bf; font-size:.92rem; }
+.footer-col ul a:hover{ color:#fff; }
+
+@media (max-width:980px){
+  .team-grid{ grid-template-columns:1fr; }
+  .workshop-grid{ grid-template-columns:1fr; }
 }

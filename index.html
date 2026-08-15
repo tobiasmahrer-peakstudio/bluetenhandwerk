@@ -5,11 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blütenhandwerk – Blumenladen in Frutigen | Hochzeitsfloristik &amp; frische Blumen</title>
 <meta name="description" content="Blütenhandwerk – Ihr Blumenladen in Frutigen. Frische Blumensträusse, individuelle Hochzeitsfloristik und florale Unikate mit Liebe zum Detail.">
+<link rel="canonical" href="index.html">
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Parisienne&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Florist",
+  "name": "Blütenhandwerk",
+  "image": "https://xn--bltenhandwerk-xob.ch/wp-content/uploads/2021/06/cropped-Styled-Shoot-Bluetenhandwerk-18-scaled-1.jpg",
+  "telephone": "+41336711215",
+  "email": "bluetenhandwerk@bluewin.ch",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kanderstegstrasse 30B",
+    "postalCode": "3714",
+    "addressLocality": "Frutigen",
+    "addressCountry": "CH"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Thursday","Friday"], "opens": "08:00", "closes": "12:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Thursday","Friday"], "opens": "13:30", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "16:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/bluetenhandwerk.ch/"]
+}
+</script>
 </head>
 <body>
 
@@ -17,19 +41,17 @@
 
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
-    <a href="#top" class="brand" aria-label="Blütenhandwerk Startseite">
+    <a href="index.html" class="brand" aria-label="Blütenhandwerk Startseite">
       <img src="assets/img/logo-icon-white.png" alt="" class="brand-icon" aria-hidden="true">
       <span class="brand-word">Blütenhandwerk</span>
     </a>
 
     <div class="header-actions">
       <nav class="main-nav" id="mainNav" aria-label="Hauptnavigation">
-        <a href="#angebot">Angebot</a>
-        <a href="#warum">Warum wir</a>
-        <a href="#ueber-uns">Über uns</a>
-        <a href="#bestellen">Bestellen</a>
-        <a href="#kontakt">Kontakt</a>
-        <a href="#bestellen" class="nav-cta">Blumen bestellen</a>
+        <a href="angebot.html">Angebot</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="kontakt.html#bestellen" class="nav-cta">Blumen bestellen</a>
       </nav>
 
       <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mainNav">
@@ -53,8 +75,8 @@
       <h1>Wir erschaffen<br>Unikate.</h1>
       <p class="hero-sub">Frische Blumen &amp; traumhafte Hochzeitsfloristik aus dem Berner Oberland – mit Liebe zum Detail von Hand gebunden.</p>
       <div class="hero-actions">
-        <a href="#bestellen" class="btn btn-primary">Blumen bestellen</a>
-        <a href="#angebot" class="btn btn-ghost">Unser Angebot</a>
+        <a href="kontakt.html#bestellen" class="btn btn-primary">Blumen bestellen</a>
+        <a href="angebot.html" class="btn btn-ghost">Unser Angebot</a>
       </div>
     </div>
     <a href="#intro" class="scroll-hint" aria-label="Nach unten scrollen"><span></span></a>
@@ -77,38 +99,24 @@
         <article class="angebot-card reveal">
           <div class="angebot-img"><img src="assets/img/angebot-hochzeit.jpg" alt="Brautstrauss mit Rosen und Pfingstrosen" loading="lazy"></div>
           <h3>Hochzeit</h3>
-          <p>Brautstrauss, Tischdekoration, Kirchenschmuck oder Blumenbogen – wir gestalten Ihre Hochzeit im Berner Oberland, in Thun oder am Blausee, ganz nach Ihrem Farbkonzept.</p>
+          <p>Brautstrauss, Tischdekoration, Kirchenschmuck oder Blumenbogen – ganz nach Ihrem Farbkonzept.</p>
         </article>
 
         <article class="angebot-card reveal">
           <div class="angebot-img"><img src="assets/img/angebot-events.jpg" alt="Florale Dekoration für Festanlässe" loading="lazy"></div>
           <h3>Festanlässe &amp; Events</h3>
-          <p>Feiern Sie einen besonderen Anlass? Wir übernehmen die Blumendekoration, damit Sie den Festtag ganz unbeschwert geniessen können.</p>
-        </article>
-
-        <article class="angebot-card reveal">
-          <div class="angebot-img"><img src="assets/img/angebot-trauer.jpg" alt="Trauerfloristik und Kranzschmuck" loading="lazy"></div>
-          <h3>Trauer</h3>
-          <p>Wir sind auch in schwierigen Zeiten für Sie da – mit Trost und einem blumigen letzten Gruss, wann immer Sie uns brauchen.</p>
+          <p>Wir übernehmen die Blumendekoration, damit Sie den Festtag ganz unbeschwert geniessen können.</p>
         </article>
 
         <article class="angebot-card reveal">
           <div class="angebot-img"><img src="assets/img/angebot-abo.jpg" alt="Wöchentliches Blumen-Abo" loading="lazy"></div>
           <h3>Blumen-Abo</h3>
-          <p>Regelmässig frische Blumen für Ihr Unternehmen – wöchentlich oder monatlich, für eine warme, einladende Atmosphäre.</p>
+          <p>Regelmässig frische Blumen für Ihr Unternehmen – wöchentlich oder monatlich.</p>
         </article>
+      </div>
 
-        <article class="angebot-card reveal">
-          <div class="angebot-img"><img src="assets/img/angebot-buero.jpg" alt="Pflanzenbegrünung im Büro" loading="lazy"></div>
-          <h3>Büro &amp; Geschäft</h3>
-          <p>Verbringen Sie viel Zeit im Büro? Unser Pflanzen-Abo sorgt für frische, gepflegte Begrünung an Ihrem Arbeitsplatz.</p>
-        </article>
-
-        <article class="angebot-card reveal">
-          <div class="angebot-img"><img src="assets/img/angebot-kalligrafie.jpg" alt="Moderne Kalligrafie und Handlettering" loading="lazy"></div>
-          <h3>Kalligrafie &amp; Handlettering</h3>
-          <p>Die Kunst des Schönschreibens – für Ihre Hochzeitseinladung oder das nächste Fest. Schön geschrieben ist's noch schöner.</p>
-        </article>
+      <div class="section-cta reveal">
+        <a href="angebot.html" class="btn btn-primary">Gesamtes Angebot ansehen</a>
       </div>
     </div>
   </section>
@@ -164,6 +172,9 @@
         <p class="lead">Mit Liebe zum Detail und Freude am Beruf gestalten wir einzigartige Blumenarrangements für jeden Anlass – geführt von Anina Bigler, europäisch diplomierte Meisterfloristin und Inhaberin, gemeinsam mit einem Team engagierter Floristinnen.</p>
         <blockquote>„Hochzeiten und Events sind etwas ganz Besonderes. Ich liebe es, solche Feste blumig zu gestalten.“</blockquote>
         <p class="quote-attr">— Anina Bigler, Inhaberin &amp; Geschäftsführerin</p>
+        <div class="section-cta" style="margin-top:2em; text-align:left;">
+          <a href="ueber-uns.html" class="btn btn-ghost-dark">Mehr über uns</a>
+        </div>
       </div>
     </div>
   </section>
@@ -172,7 +183,7 @@
     <div class="container">
       <p class="kicker center light">Online bestellen</p>
       <h2 class="center reveal light">Blumen bequem &amp; zuverlässig bestellen</h2>
-      <p class="center lead light reveal">Unsere Blumen werden mit Sorgfalt ausgewählt, liebevoll arrangiert und termingerecht geliefert – perfekt für Geburtstage, Jubiläen, Muttertag oder einfach, um Freude zu schenken. Geliefert wird während den Öffnungszeiten.</p>
+      <p class="center lead light reveal">Unsere Blumen werden mit Sorgfalt ausgewählt, liebevoll arrangiert und termingerecht geliefert – perfekt für Geburtstage, Jubiläen, Muttertag oder einfach, um Freude zu schenken.</p>
 
       <div class="bestellen-grid reveal">
         <a class="bestellen-item" href="tel:+41336711215">
@@ -193,63 +204,11 @@
           <span class="bestellen-value">Auch per TWINT möglich</span>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="kontakt" id="kontakt">
-    <div class="container kontakt-grid">
-      <div class="kontakt-copy reveal">
-        <p class="kicker">Kontakt</p>
-        <h2>Haben Sie Fragen oder möchten Sie Blumen bestellen?</h2>
-        <p class="lead">Kontaktieren Sie uns für Ihre Anliegen oder Bestellungen. Ob Sie Informationen benötigen, einen Termin vereinbaren oder Blumen bestellen möchten – wir stehen Ihnen gerne zur Verfügung.</p>
-
-        <div class="kontakt-details">
-          <p><strong>Blütenhandwerk</strong><br>
-          Kanderstegstrasse 30B<br>
-          3714 Frutigen</p>
-
-          <p class="oeffnungszeiten">
-            <strong>Öffnungszeiten</strong><br>
-            Mo / Di: 8.00–12.00 &amp; 13.30–18.00<br>
-            Mi: geschlossen<br>
-            Do / Fr: 8.00–12.00 &amp; 13.30–18.00<br>
-            Sa: 8.00–16.00
-          </p>
-
-          <a class="social-link" href="https://www.instagram.com/bluetenhandwerk.ch/" target="_blank" rel="noopener">Folgen Sie uns auf Instagram →</a>
-        </div>
+      <div class="section-cta reveal">
+        <a href="kontakt.html" class="btn btn-ghost">Kontaktformular &amp; Standort</a>
       </div>
-
-      <form class="kontakt-form reveal" id="contactForm" novalidate>
-        <div class="form-row">
-          <label for="name">Ihr Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-row">
-          <label for="phone">Telefonnummer</label>
-          <input type="tel" id="phone" name="phone">
-        </div>
-        <div class="form-row">
-          <label for="email">E-Mail</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-row">
-          <label for="message">Ihre Nachricht an uns</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">Absenden</button>
-        <p class="form-note" id="formNote"></p>
-      </form>
     </div>
-  </section>
-
-  <section class="standort" id="standort">
-    <iframe
-      title="Standort Blütenhandwerk, Kanderstegstrasse 30B, 3714 Frutigen"
-      src="https://www.google.com/maps?q=Kanderstegstrasse%2030B%2C%203714%20Frutigen&output=embed"
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
   </section>
 
 </main>
@@ -263,6 +222,16 @@
     </div>
 
     <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="angebot.html">Angebot</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
       <h4>Kontakt</h4>
       <p>Kanderstegstrasse 30B<br>3714 Frutigen</p>
       <p><a href="tel:+41336711215">033 671 12 15</a></p>
@@ -271,6 +240,7 @@
 
     <div class="footer-col">
       <h4>Öffnungszeiten</h4>
+      <p class="open-status" data-open-status style="margin-bottom:.8em;"></p>
       <p>Mo / Di: 8–12 &amp; 13.30–18 Uhr<br>
       Mi: geschlossen<br>
       Do / Fr: 8–12 &amp; 13.30–18 Uhr<br>

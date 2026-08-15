@@ -66,6 +66,34 @@
     });
   }
 
+  const openStatusEls = document.querySelectorAll('[data-open-status]');
+  if (openStatusEls.length) {
+    const hours = {
+      1: [[8 * 60, 12 * 60], [13 * 60 + 30, 18 * 60]],
+      2: [[8 * 60, 12 * 60], [13 * 60 + 30, 18 * 60]],
+      3: [],
+      4: [[8 * 60, 12 * 60], [13 * 60 + 30, 18 * 60]],
+      5: [[8 * 60, 12 * 60], [13 * 60 + 30, 18 * 60]],
+      6: [[8 * 60, 16 * 60]],
+      0: [],
+    };
+    const now = new Date();
+    const minutesNow = now.getHours() * 60 + now.getMinutes();
+    const todaysRanges = hours[now.getDay()] || [];
+    const isOpen = todaysRanges.some(([start, end]) => minutesNow >= start && minutesNow < end);
+
+    openStatusEls.forEach((el) => {
+      el.classList.toggle('is-closed', !isOpen);
+      const dot = document.createElement('span');
+      dot.className = 'dot';
+      const label = document.createElement('span');
+      label.textContent = isOpen ? 'Jetzt geöffnet' : 'Aktuell geschlossen';
+      el.innerHTML = '';
+      el.appendChild(dot);
+      el.appendChild(label);
+    });
+  }
+
   const revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && revealEls.length) {
     const observer = new IntersectionObserver(
